@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <title>Fastack</title>
+</head>
+<body>
+    <header class="cabecalho teste">
+            <img class="lista__logo teste" src="./assets/img/Logo.svg" alt="Logo">
+            <nav class="cabecalho__icone">
+                <img class="icone teste" src="./assets/img/Dark mode.svg" alt="ícone da Moon">
+                <img class="icone teste" src="./assets/img/Notification.svg" alt="ícone da Notification">
+                <img class="icone teste" src="./assets/img/Ellipse 1.svg" alt="ícone da Account">
+           </nav>
+    </header>
+
+    <div class="container teste">
+        <aside class="menu__lateral teste">
+            <nav>
+                <section class="tarefas teste">
+                    <h2>Tarefas</h2>
+                    <ul>
+                        <li>Hoje</li>
+                        <li>Próximos 7 dias</li>
+                    </ul>
+                </section>
+                <section class="tarefas teste">
+                    <h2>Listas</h2>
+                    <ul id="listaTarefas">
+                        <li class="menu__link">Mercado <span id="contador-mercado">(0)</span></li>
+                        <li>Trabalho <span id="contador-trabalho">(0)</span></li>
+                        <li>Casa <span id="contador-casa">(0)</span></li>
+                        <li>Carro <span id="contador-carro">(0)</span></li>
+                        <li>Faculdade <span id="contador-faculdade">(0)</span></li>
+                    </ul>
+                </section>
+                <section class="tarefas teste" >
+                    <h2>Lixeira</h2>
+                    <ul>
+                        <li>Rascunho</li>
+                        <li>Lixeira</li>
+                        <li>Restaurar</li>
+                    </ul>
+                </section>
+                </nav>
+            </nav>
+       </aside>
+
+       <main class="container__principal teste">
+            <section class="formulario teste">
+                <h1>hoje</h1>
+                <div class="container__navegacao teste">
+                    <input type="text" id="novaTarefa" placeholder="Crie uma nova tarefa" class="container__text teste">
+
+                    <button onclick="adicionarTarefa()" class="container__button teste">Nova tarefa</button>
+
+                    <select id="categoriaTarefa" class="categoriaTarefa">
+                        <option value="mercado">Mercado</option>
+                        <option value="trabalho">Trabalho</option>
+                        <option value="casa">Casa</option>
+                        <option value="carro">Carro</option>
+                        <option value="faculdade">Faculdade</option>
+                    </select>
+
+                </div>
+
+                <div id="listaDeTarefas" class="container__lista-tarefas teste"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

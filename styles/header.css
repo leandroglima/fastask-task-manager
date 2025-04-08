@@ -1,0 +1,23 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 30px 0px 30px ;
+}
+
+
+.cabecalho__icone {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.icone {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icone:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}

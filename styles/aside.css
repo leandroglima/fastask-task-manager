@@ -1,0 +1,67 @@
+.menu__lateral {
+    width: 250px;
+    height: 100vh;
+    position: absolute;
+    padding: 1.2em;
+}
+
+.tarefas {
+    border-bottom: 1px solid var(--cor-tarefa);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+}
+
+.tarefas, h2 {
+    font-weight: bold;
+    color: var(--cor-titulo);
+}
+
+h2 {
+    font-family: var(--font-principal);
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-secundaria);
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--cor-titulo);
+    background-color: 2px 2px 5px var(--cor-sombra);
+    background-color: var(--cor-fundo-sombra);
+}
+
+.menu__link, li {
+    cursor: pointer;
+    width: 90%;
+    border: 2px transparent;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 1s;
+}
+
+li:hover {
+    transform: translateY(-4px);
+}
+
+.menu__link {
+    background-color: var(--cor-lista); 
+}
+
+.menu__link:hover {
+    background-color: var(--cor-fundo-sombra); /* Fundo levemente esverdeado */
+    opacity: 0.9; /* Pequena transparência */
+    box-shadow: 2px 2px 5px var(--cor-sombra); /* Sombra sutil */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+

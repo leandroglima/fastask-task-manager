@@ -1,0 +1,30 @@
+@import url(../styles/header.css);
+@import url(../styles/main.css);
+@import url(../styles/aside.css);
+
+:root {
+    --cor-titulo: #2D3E50;
+    --cor-principal: #3B413A;
+    --cor-button: #63A28C;
+    --cor-buttoon-hover: #2D6A4F;
+    --cor-lista: #63A28C;
+    --cor-borda: rgba(59, 65, 58, 0.5);
+    --cor-de-fundo: rgb(245, 245, 245);
+    --cor-tarefa: #ccc;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-fundo-sombra: rgba(45, 106, 79, 0.2);
+    --cor-branca: #f0f0f0;
+
+    --font-principal: "Playfair Display", sans-serif;
+    --font-secundaria: "Montserrat", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 1.5em;
+    background-color: var(--cor-do-fundo);
+}
+
+.test {
+    border: 2px solid red;
+}
