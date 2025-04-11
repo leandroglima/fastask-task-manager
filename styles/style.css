@@ -25,6 +25,16 @@ body {
     background-color: var(--cor-do-fundo);
 }
 
-.test {
-    border: 2px solid red;
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 1.5em;
+    }
 }
+
+.testee {
+    border: 1px solid red;
+}
+
+

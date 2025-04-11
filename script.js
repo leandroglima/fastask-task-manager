@@ -18,3 +18,13 @@ function adicionarTarefa() {
   const atual = parseInt(contador.textContent.match(/\d+/)[0]);
   contador.textContent = `(${atual + 1})`;
 }
+
+
+const togglebtn = document.getElementById ('menuHamburger');
+const menuLista = document.getElementById ('containerLateral');
+
+togglebtn.addEventListener ('click', () => {
+  menuLista.classList.toggle('ativo');
+});
+
+

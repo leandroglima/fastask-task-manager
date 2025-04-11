@@ -7,43 +7,47 @@ h1 {
     color: var(--cor-titulo);
 }
 
-.container {
-    padding: 10px;
+.formulario__principal, .container__formulario,
+.campo__pesquisa, .campo__pesquisa {
+    display: flex;
 }
 
-.formulario {
-    display: flex;
+
+.formulario__principal {
+    width: 80%;
     flex-direction: column;
-    padding: 0 0 0 3em;
+    margin-left: auto;
 }
 
-.container__principal {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.container__navegacao {
-    display: flex;
+.container__formulario, .campo__pesquisa {
     align-items: center;
     gap: 1em;
 }
 
-.container__text {
-    width: 76%;
-    padding: 15px;
-    border: 1px solid var(--cor-principal);
-    border-radius: 5px;
+.container__formulario {
+    justify-content: center;
 }
 
-.container__text::placeholder {
+.campo__pesquisa {
+    flex-wrap: wrap;
+}
+
+
+.texto__tarefa {
+    width: 70%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--cor-principal);
+}
+
+.texto__tarefa::placeholder {
     font-family: var(--font-principal);
     font-weight: bold;
     font-size: 20px;
 }
 
-.container__button {
-    display: flex;
-    align-items: center;
+.button {
+    text-align: center;
     font-family: var(--font-principal);
     font-size: 20px;
     font-weight: bold;
@@ -51,12 +55,11 @@ h1 {
     background-color: var(--cor-button);
     color: var(--cor-principal);
     border: none;
-    
     border-radius: 12px;
     cursor: pointer;
 }
 
-.container__button:hover {
+.button:hover {
     background-color: var(--cor-fundo-sombra); /* Fundo levemente esverdeado */
     opacity: 0.9; /* Pequena transparência */
     box-shadow: 2px 2px 5px var(--cor-sombra); /* Sombra sutil */
@@ -65,11 +68,14 @@ h1 {
 
 
 .container__lista-tarefas {
+    width: 70%;
+    margin-right: auto;
     margin-top: 20px;
     padding-left: 0;
 }
 
 .container__lista-tarefas li {
+    width: 100%;
     font-family: var(--font-secundaria);
     background-color: var(--cor-branca);
     margin-bottom: 10px;
@@ -79,17 +85,54 @@ h1 {
 }
 
 
-.container__navegacao {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .categoriaTarefa {
+    width: 15%;
     border-radius: 10px;
     padding: 10px;
     font-family: var(--font-principal);
     font-size: 1em;
     font-weight: 600;
     color: var(--cor-titulo);
+}
+
+@media (max-width: 1023px) {
+    .formulario__principal {
+        width: 76%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+
+    .formulario__principal {
+        width: 100%;
+    }
+
+    .texto__tarefa  {
+        width: 60%;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .button {
+        width: 27%;
+        font-size: 14px;
+        padding: 10px 1px;
+    }
+
+
+    .categoriaTarefa {
+        width: 35%;
+        font-size: 0.9rem;
+    }
+
+    .container__lista-tarefas {
+        width: 100%;
+    }
+
 }
 

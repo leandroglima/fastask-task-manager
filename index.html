@@ -11,8 +11,12 @@
     <title>Fastack</title>
 </head>
 <body>
-    <header class="cabecalho teste">
-            <img class="lista__logo teste" src="./assets/img/Logo.svg" alt="Logo">
+    <header class="cabecalho test">
+            <img class="logo test" src="./assets/img/Logo.svg" alt="Logo">
+            <div class="container__hamburger">
+                <button class="menu__hamburger" id="menuHamburger">☰</button>
+                <img class="logo__mobile" src="assets/img/Symbol.svg" alt="logo para Mobile">
+            </div>
             <nav class="cabecalho__icone">
                 <img class="icone teste" src="./assets/img/Dark mode.svg" alt="ícone da Moon">
                 <img class="icone teste" src="./assets/img/Notification.svg" alt="ícone da Notification">
@@ -20,17 +24,16 @@
            </nav>
     </header>
 
-    <div class="container teste">
-        <aside class="menu__lateral teste">
-            <nav>
-                <section class="tarefas teste">
+        <aside class="container__lateral teste" id="containerLateral">
+            <nav class="barra__lateral teste">
+                <section class="menu__lateral teste">
                     <h2>Tarefas</h2>
                     <ul>
                         <li>Hoje</li>
                         <li>Próximos 7 dias</li>
                     </ul>
                 </section>
-                <section class="tarefas teste">
+                <section class="menu__lateral teste">
                     <h2>Listas</h2>
                     <ul id="listaTarefas">
                         <li class="menu__link">Mercado <span id="contador-mercado">(0)</span></li>
@@ -40,7 +43,7 @@
                         <li>Faculdade <span id="contador-faculdade">(0)</span></li>
                     </ul>
                 </section>
-                <section class="tarefas teste" >
+                <section class="menu__lateral teste" >
                     <h2>Lixeira</h2>
                     <ul>
                         <li>Rascunho</li>
@@ -48,17 +51,16 @@
                         <li>Restaurar</li>
                     </ul>
                 </section>
-                </nav>
             </nav>
        </aside>
 
-       <main class="container__principal teste">
-            <section class="formulario teste">
+       <main class="container__formulario test">
+            <section class="formulario__principal test">
                 <h1>hoje</h1>
-                <div class="container__navegacao teste">
-                    <input type="text" id="novaTarefa" placeholder="Crie uma nova tarefa" class="container__text teste">
+                <div class="campo__pesquisa test">
+                    <input type="text" id="novaTarefa" placeholder="Crie uma nova tarefa" class="texto__tarefa test">
 
-                    <button onclick="adicionarTarefa()" class="container__button teste">Nova tarefa</button>
+                    <button onclick="adicionarTarefa()" class="button test">Nova tarefa</button>
 
                     <select id="categoriaTarefa" class="categoriaTarefa">
                         <option value="mercado">Mercado</option>
@@ -70,10 +72,9 @@
 
                 </div>
 
-                <div id="listaDeTarefas" class="container__lista-tarefas teste"></div>
+                <div id="listaDeTarefas" class="container__lista-tarefas"></div>
             </section>
         </main>
-    </div>
 
     <script src="./script.js"></script>
 </body>
