@@ -73,6 +73,10 @@ li:hover {
     cursor: pointer;
 }
 
+.icone__barraLateral {
+  display: none;
+}
+
 @media (max-width: 768px) {
     
     /* Botão do menu */
@@ -84,6 +88,7 @@ li:hover {
     top: 20px;
     left: 20px;
     z-index: 1000;
+    color: var( --cor-menu-hamburger-mobile);
   }
   
   /* Sidebar oculta por padrão */
@@ -93,8 +98,7 @@ li:hover {
     width: 13rem;
     min-height: 1rem;
     box-sizing: border-box;
-    background-color: transparent;
-    color: var(--cor-titulo);
+    background-color: var(--cor-menu-lateral-mobile);
     padding: 80px 0px 0 25px;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
@@ -109,7 +113,7 @@ li:hover {
   .menu__lateral h2 {
     margin-top: 20px;
     font-size: 1.2rem;
-    color: var(--cor-titulo);
+    color: var(--cor-titulo-mobile);
   }
   
   .menu__lateral ul {
@@ -118,10 +122,40 @@ li:hover {
   }
   
   .menu__lateral li {
-    width: 9rem;
+    width: 11rem;
     min-height: 1rem;
-    padding: 10px 8px;
-    border-bottom: 1px solid #444;
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--cor-branca-mobile);
+    color: var(--cor-branca-mobile);
+    background-color: transparent;
+    font-size: 0.9rem;
   }
+
+  .tarefa__data, .lixeira__diversos {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 0.4em;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: var(--cor-fundo-sombra-mobile);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .icone__barraLateral {
+    display: block;
+  }
+
 }
 

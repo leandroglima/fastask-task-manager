@@ -13,7 +13,21 @@
     --cor-tarefa: #ccc;
     --cor-sombra: rgba(0, 0, 0, 0.1);
     --cor-fundo-sombra: rgba(45, 106, 79, 0.2);
-    --cor-branca: #f0f0f0;
+    
+
+    /* CORES DO MOBILE*/
+
+    --cor-de-fundo-mobile: rgb(245, 245, 245);
+    --cor-principal-mobile: #3B413A;
+    --cor-titulo-mobile: #24e092;
+    --cor-menu-hamburger-mobile: #63A28C;
+    --cor-button-mobile: #3B413A;
+    --cor-menu-lateral-mobile: #1b4332f6;
+    --cor-branca-mobile: #f1f1f1;
+    --cor-sombra--mobile: rgba(0, 0, 0, 0.1);
+    --cor-fundo-sombra-mobile: #1b43321a;
+
+
 
     --font-principal: "Playfair Display", sans-serif;
     --font-secundaria: "Montserrat", sans-serif;
@@ -30,6 +44,7 @@ body {
     body {
         margin: 0;
         padding: 1.5em;
+        background-color: var(--cor-de-fundo-mobile);
     }
 }
 

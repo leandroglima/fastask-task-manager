@@ -22,9 +22,21 @@ function adicionarTarefa() {
 
 const togglebtn = document.getElementById ('menuHamburger');
 const menuLista = document.getElementById ('containerLateral');
+const overlay = document.getElementById('overlay')
 
 togglebtn.addEventListener ('click', () => {
   menuLista.classList.toggle('ativo');
+  overlay.classList.toggle('hidden')
+
+  // Troca de ícone do botão = <-> X
+togglebtn.textContent = menuLista.classList.contains('ativo') ? '✕' : '☰';
+});
+
+  // Fechar o menu clicando fora
+overlay.addEventListener('click', () => {
+  menuLista.classList.remove('ativo');
+  overlay.classList.add('hidden');
+  togglebtn.textContent = '☰';
 });
 
 
